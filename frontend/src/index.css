@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+/* Main CSS Index */
+.bg-loginpage{
+  background-image: url('./images/background/ntp-3.jpg');
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.coverbg{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.form-login{
+  width: 500px;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(31, 29, 29);
+}
+
+.bg-library{
+  background-image: url('./images/background/library.jpg');
+  min-height: 90vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.coverbg2{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Main CSS END */
+
+.text-underline{
+  border-bottom: 2px black solid;
+}
+
+.text-underline-w{
+  border-bottom: 2px white solid;
+}
+
+.border{
+  border: 1px solid black;
+}
+
+.border-w{
+  border: 1px solid white;
+}
+
+.header-contain{
+  height: 10vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+.link-head{
+  font-size: 20px;
+  font-weight: 800;
+  /* border-left: 1px solid black; */
+  /* border-right: 1px solid black; */
+  padding: 10px 90px;
+  height: 100%;
+}
+.link-head:hover{
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+
+.card{
+  width: 20rem;
+  text-align: center;
+}
+.card-img-top{
+  height: 120px;
+}
+.card-box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #303030;
+}
