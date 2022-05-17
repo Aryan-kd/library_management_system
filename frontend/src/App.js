@@ -28,8 +28,6 @@ const App = () => {
 
         <Route path='/books' component={BooksScreen} exact />
 
-        <Route path='/books/search/:keyword' component={BooksScreen} />
-
         <Route path='/saved' component={SavedBooksScreen} exact />
 
         <Route path='/saved/:id?' component={SavedBooksScreen} exact />

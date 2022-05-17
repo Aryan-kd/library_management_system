@@ -13,7 +13,7 @@ const Header = ({ history }) => {
   };
 
   return (
-    <nav className='navbar navbar-expand-md navbar-light bg-light'>
+    <nav className='navbar navbar-expand-md navbar-dark bg-dark text-light'>
       <div className='container-fluid'>
         <Link className='navbar-brand' to='/'>
           Library
@@ -51,6 +51,7 @@ const Header = ({ history }) => {
                   role='button'
                   data-bs-toggle='dropdown'
                   aria-expanded='false'
+                  to={''}
                 >
                   <i className='fa-solid fa-user-gear'></i> Admin
                 </Link>
@@ -80,7 +81,7 @@ const Header = ({ history }) => {
             ) : (
               ''
             )}
-            <li className='nav-item'>
+            <div className='nav-item'>
               {userInfo ? (
                 <li className='nav-item dropdown'>
                   <Link
@@ -89,6 +90,7 @@ const Header = ({ history }) => {
                     role='button'
                     data-bs-toggle='dropdown'
                     aria-expanded='false'
+                    to={''}
                   >
                     <i className='fa-solid fa-user'></i>{' '}
                     {userInfo.name.split(' ')[0]}
@@ -114,7 +116,7 @@ const Header = ({ history }) => {
                   <i className='fa-solid fa-user'></i> Profile
                 </Link>
               )}
-            </li>
+            </div>
           </ul>
         </div>
       </div>

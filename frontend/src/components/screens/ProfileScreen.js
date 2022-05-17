@@ -187,7 +187,14 @@ const ProfileScreen = ({ history }) => {
               </form>
             </div>
             <div className='col-lg-6 col-sm-6 col-md-5'>
-              <img src={userInfo.image} className='w-100 h-100' alt='student' />
+              <div className='d-flex justify-content-center align-items-center'>
+                <img
+                  src={userInfo.image}
+                  className='profile-image'
+                  alt='student'
+                />
+              </div>
+              <h2 className='text-center my-3'>Profile Image</h2>
             </div>
           </div>
         </div>
@@ -200,6 +207,7 @@ const ProfileScreen = ({ history }) => {
         </div>
       )}
       <div className='contaienr-fluid my-3'>
+        <h1 className='text-center'>ISSUED Books</h1>
         {userInfo.uid === 'ADMIN' ? (
           <div className='container-fluid'>
             <table className='table table-dark table-hover'>

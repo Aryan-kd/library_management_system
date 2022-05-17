@@ -61,7 +61,7 @@ const SingleBookScreen = ({ match, history, location }) => {
                   <Rating value={book.rating} text={book.upvotes} />
                 </div>
                 <div className='list-group-item list-group-item-action'>
-                  <p>Views: {book.numOfView}</p>
+                  <p>Field: {book.field}</p>
                 </div>
                 <div className='list-group-item list-group-item-action'>
                   <p>Production House: {book.publisher}</p>

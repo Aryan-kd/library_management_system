@@ -104,6 +104,13 @@ li {
   align-items: center;
 }
 
+.profile-image{
+  height: 400px;
+  width: auto;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-top: 20vh;
+}
 
 ::-webkit-scrollbar {
   width: 8px;
