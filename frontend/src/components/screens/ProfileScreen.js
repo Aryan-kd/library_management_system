@@ -208,55 +208,22 @@ const ProfileScreen = ({ history }) => {
       )}
       <div className='contaienr-fluid my-3'>
         <h1 className='text-center'>ISSUED Books</h1>
-        {userInfo.uid === 'ADMIN' ? (
-          <div className='container-fluid'>
-            <table className='table table-dark table-hover'>
-              <thead>
-                <tr>
-                  <th scope='col'>ID</th>
-                  <th scope='col'>Name</th>
-                  <th scope='col'>UID</th>
-                  <th scope='col'>PUBLISHER</th>
-                  <th scope='col'>FIELD</th>
-                  <th scope='col'>ISSUED</th>
-                </tr>
-              </thead>
-              <tbody>
-                {issuedBooks.map((iBook) => (
-                  <tr key={iBook.product}>
-                    <td>{iBook.product}</td>
-                    <td>{iBook.name}</td>
-                    <td>{iBook.uid}</td>
-                    <td>{iBook.publisher}</td>
-                    <td>{iBook.field}</td>
-                    <td>
-                      {iBook.issued ? (
-                        <i className='fas fa-check text-success'></i>
-                      ) : (
-                        <i className='fas fa-times text-danger'></i>
-                      )}
-                    </td>
+        {userInfo ? (
+          userInfo.uid === 'ADMIN' ? (
+            <div className='container-fluid'>
+              <table className='table table-dark table-hover'>
+                <thead>
+                  <tr>
+                    <th scope='col'>ID</th>
+                    <th scope='col'>Name</th>
+                    <th scope='col'>UID</th>
+                    <th scope='col'>PUBLISHER</th>
+                    <th scope='col'>FIELD</th>
+                    <th scope='col'>ISSUED</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        ) : (
-          <div className='container-fluid'>
-            <table className='table table-dark table-hover'>
-              <thead>
-                <tr>
-                  <th scope='col'>ID</th>
-                  <th scope='col'>Name</th>
-                  <th scope='col'>UID</th>
-                  <th scope='col'>PUBLISHER</th>
-                  <th scope='col'>FIELD</th>
-                  <th scope='col'>ISSUED</th>
-                </tr>
-              </thead>
-              <tbody>
-                {issuedBooks.map((iBook) =>
-                  iBook.uid === userInfo.uid ? (
+                </thead>
+                <tbody>
+                  {issuedBooks.map((iBook) => (
                     <tr key={iBook.product}>
                       <td>{iBook.product}</td>
                       <td>{iBook.name}</td>
@@ -271,13 +238,50 @@ const ProfileScreen = ({ history }) => {
                         )}
                       </td>
                     </tr>
-                  ) : (
-                    ''
-                  )
-                )}
-              </tbody>
-            </table>
-          </div>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <div className='container-fluid'>
+              <table className='table table-dark table-hover'>
+                <thead>
+                  <tr>
+                    <th scope='col'>ID</th>
+                    <th scope='col'>Name</th>
+                    <th scope='col'>UID</th>
+                    <th scope='col'>PUBLISHER</th>
+                    <th scope='col'>FIELD</th>
+                    <th scope='col'>ISSUED</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {issuedBooks.map((iBook) =>
+                    iBook.uid === userInfo.uid ? (
+                      <tr key={iBook.product}>
+                        <td>{iBook.product}</td>
+                        <td>{iBook.name}</td>
+                        <td>{iBook.uid}</td>
+                        <td>{iBook.publisher}</td>
+                        <td>{iBook.field}</td>
+                        <td>
+                          {iBook.issued ? (
+                            <i className='fas fa-check text-success'></i>
+                          ) : (
+                            <i className='fas fa-times text-danger'></i>
+                          )}
+                        </td>
+                      </tr>
+                    ) : (
+                      ''
+                    )
+                  )}
+                </tbody>
+              </table>
+            </div>
+          )
+        ) : (
+          ''
         )}
       </div>
     </div>

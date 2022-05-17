@@ -1,0 +1,16 @@
+1. Connect to Internet
+2. Install node-v16.13.0-x64.msi (if node is not install).
+3. run install.cmd
+4. run install2.cmd
+5. run start.cmd
+
+your project will open
+
+some login id:
+(Admin ID)
+UID: Admin1
+pass: 12345
+
+(Student ID)
+UID: 20BCA7166
+pass: 12345

@@ -1,8 +1,8 @@
 {
-  "name": "manga_reader",
+  "name": "library_management_system",
   "type": "module",
   "version": "1.0.0",
-  "description": "Best Manga Reading Website",
+  "description": "Best Library Management Website",
   "main": "index.js",
   "scripts": {
     "start": "node ./backhand/index.js",
