@@ -209,7 +209,7 @@ const ProfileScreen = ({ history }) => {
       <div className='contaienr-fluid my-3'>
         <h1 className='text-center'>ISSUED Books</h1>
         {userInfo ? (
-          userInfo.uid === 'ADMIN' ? (
+          userInfo.field === 'ADMIN' ? (
             <div className='container-fluid'>
               <table className='table table-dark table-hover'>
                 <thead>
